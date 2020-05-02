@@ -1,3 +1,7 @@
+import os
+
+from tempfile import gettempdir
+
 from boto3 import Session
 from botocore.exceptions import BotoCoreError, ClientError
 from contextlib import closing
@@ -18,7 +22,7 @@ class AWSPolly:
         pass
 
     def create_path(self, sentence):
-        return DIRECTORY_NAME + sentence + '.mp3'
+        return self.DIRECTORY_NAME + sentence + '.mp3'
 
     def get_sentence_mp3(self, sentence):
         try:
@@ -28,10 +32,10 @@ class AWSPolly:
 
             if self.AUDIO_STREAM in response:
                 with closing(response[self.AUDIO_STREAM]) as stream:
-                    output = os.path.join(gettempdir(), FILE_NAME)
+                    output = os.path.join(gettempdir(), self.AUDIO_FILE_NAME)
 
                     try:
-                        with open(create_path(sentence), "wb") as file:
+                        with open(self.create_path(sentence), "wb") as file:
                             file.write(stream.read())
                     except IOError as error:
                         print('AWS POLLY ERROR of [' + sentence + '].')
