@@ -1,4 +1,3 @@
-import os
 import sys
 import subprocess
 
@@ -6,8 +5,6 @@ import random
 
 import codecs
 import json
-
-from tempfile import gettempdir
 
 from main_jsoncontainer import JsonContainer
 from main_httprequest import HttpRequest 
