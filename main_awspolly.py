@@ -26,7 +26,7 @@ class AWSPolly:
             polly = session.client(self.AWS_POLLY)
             response = polly.synthesize_speech(Text=sentence, OutputFormat="mp3", VoiceId=self.AUDIO_VOICE)
 
-            if AUDIO_STREAM in response:
+            if self.AUDIO_STREAM in response:
                 with closing(response[self.AUDIO_STREAM]) as stream:
                     output = os.path.join(gettempdir(), FILE_NAME)
 
