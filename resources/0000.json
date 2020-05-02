@@ -1,0 +1,14 @@
+{"ENGLISH":
+[
+    {"ID":   1, "AUDIO": 1, "STATE": 0, "WORD": "spot",
+        "MEANS": [{"CLASS": "名詞", "MEAN": "場所"}],
+        "SYNONSYM": [{"WORD": ""}],
+        "USAGES": [{"USAGE": ""}],
+        "SENTENCES": [{"SENTENCE": "Let's stop for a spot of lunch."}]},
+
+    {"ID":   2, "AUDIO": 1, "STATE": 0, "WORD": "sport",
+        "MEANS": [{"CLASS": "名詞", "MEAN": "運動"}],
+        "SYNONSYM": [{"WORD": ""}],
+        "USAGES": [{"USAGE": ""}],
+        "SENTENCES": [{"SENTENCE": "She's not especially interested in sport."}]},
+]}

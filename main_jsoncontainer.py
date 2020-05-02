@@ -1,0 +1,2 @@
+class JsonContainer:
+    pass
