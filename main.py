@@ -114,9 +114,9 @@ def audio_content(content: bytearray):
     player.play(content)
 
 '''
-    play audio.
+    play audio of sentence.
 
-    content : byte array of mp3
+    sentence : sentance
 '''
 def audio_sentance_content(sentance):
     polly = AWSPolly()
